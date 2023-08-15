@@ -13,7 +13,9 @@ import {
 } from '@nestjs/common';
 import { PoapService } from './poap.service';
 import { CreatePoapDTO } from './dto/createPoapDTO';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('poap')
 @Controller('poap')
 export class PoapController {
   constructor(private poapService: PoapService) {}

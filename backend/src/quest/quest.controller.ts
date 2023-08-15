@@ -13,6 +13,9 @@ import {
 } from '@nestjs/common';
 import { QuestService } from './quest.service';
 import { CreateQuestDTO } from './dto/createQuestDTO';
+import { ApiTags } from '@nestjs/swagger';
+
+@ApiTags('quest')
 @Controller('quest')
 export class QuestController {
   constructor(private questService: QuestService) {}
