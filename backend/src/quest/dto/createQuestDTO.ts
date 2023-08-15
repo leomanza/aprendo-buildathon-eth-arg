@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateQuestDTO {
-  @ApiProperty({ example: 'Envio CV' })
+  @ApiProperty({ example: 'Mint NFT' })
   readonly nameQuest: string;
   readonly createdat: Date;
 }
