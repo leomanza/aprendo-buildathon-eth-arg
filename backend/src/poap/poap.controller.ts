@@ -32,6 +32,18 @@ export class PoapController {
       res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(error);
     }
   }
+
+  
+  @Get('/getpoapsaprendo')
+  async getpoapsaprendo(@Res() res) {
+    try {
+      const poaps = await this.poapService.getpoapsaprendo();
+      if (!poaps) throw new NotFoundException('POAPS Does not exists');
+      return res.status(HttpStatus.OK).json(poaps);
+    } catch (error) {
+      res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(error);
+    }
+  }
   @Get('/byidpoap/:idPoap')
   async getPoapByIdPoap(@Res() res, @Param('idPoap') idPoap: string) {
     try {
@@ -42,4 +54,5 @@ export class PoapController {
       res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(error);
     }
   }
+
 }

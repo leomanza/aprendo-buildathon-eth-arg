@@ -1,9 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 
+
 export class CreatePoapDTO {
-  @ApiProperty({ example: '3010642' })
-  readonly idPoap: string;
-  @ApiProperty({ example: 'Prueba POAP' })
-  readonly namePoap: string;
-  readonly createdat: Date;
+  readonly tokenId: string;
+  readonly chain: string;
+  readonly created: string;
+  readonly migrated: string
 }
+
