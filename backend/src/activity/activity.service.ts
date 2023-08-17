@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Activity } from './interfaces/activity.interface';
-import { CreateActivityDTO } from './dto/CreateActivityDTO';
+import { CreateActivityDTO } from './dto/createActivityDTO';
 
 @Injectable()
 export class ActivityService {

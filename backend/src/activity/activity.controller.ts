@@ -12,7 +12,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { ActivityService } from './activity.service';
-import { CreateActivityDTO } from './dto/CreateActivityDTO';
+import { CreateActivityDTO } from './dto/createActivityDTO';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('activity')
